@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Fondo negro */
+            color: #fff; /* Texto blanco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .profile-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .profile {
+            background-color: #1a1a1a; /* Fondo gris oscuro para las tarjetas */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3); /* Sombra roja */
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile:hover {
+            transform: translateY(-10px); /* Efecto de levantar al pasar el mouse */
+            box-shadow: 0 8px 16px rgba(255, 0, 0, 0.5); /* Sombra más intensa al pasar el mouse */
+        }
+
+        .profile:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 2px solid #ff0000; /* Borde rojo para las imágenes */
+        }
+
+        .profile h2 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #ff0000; /* Texto rojo para los nombres */
+        }
+
+        .profile p {
+            margin: 10px 0 0;
+            color: #ccc; /* Texto gris claro para la descripción */
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile">
+            <a href="./main_julio.html"><img src="./images/computer.png" alt="Julio Inda"></a>
+            <h2>Julio Inda</h2>
+            <p>Web Developer</p>
+        </div>
+        <div class="profile">
+            <a href="./main_jonathan.html"><img src="./images/laptop.png" alt="Jonathan Ortega"></a>
+            <h2>Jonathan Ortega</h2>
+            <p>Web Developer</p>
+        </div>
+    </div>
+</body>
+</html>
