@@ -1,89 +1,72 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Navbar, Nav, Card, Button, Form } from "react-bootstrap";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1  id="text">starting..</h1>
+        <p>I'm a Student of Software Engineering and a Cook.</p>
+    </header>
 
-const App = () => {
-  return (
-    <>
-      <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
-        <Container>
-          <Navbar.Brand href="#home">My Portfolio</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="#projects">Projects</Nav.Link>
-              <Nav.Link href="#contact">Contact</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm a cook in Kibos since 2020, and actually I'm studying software Engineering. I really enjoy to cook, and also to read Comics.</p>
+    </section>
 
-      <Container className="text-center py-5">
-        <h1>Welcome to My Portfolio</h1>
-        <p>I am a Software Engineer and a Cook.</p>
-      </Container>
-
-      <Container id="projects" className="py-5">
-        <h2 className="text-center">Projects</h2>
-        <div className="row mt-4">
-          <div className="col-md-4">
-            <Card>
-              <Card.Img variant="top" src="/images/3d-array.webp" />
-              <Card.Body className="text-center">
-                <Card.Title>Array3D</Card.Title>
-                <Card.Text>Prints a 3D array in the console.</Card.Text>
-                <Button variant="dark" href="https://github.com/JhonatAP/JavaProjects">GitHub</Button>
-              </Card.Body>
-            </Card>
-          </div>
-          <div className="col-md-4">
-            <Card>
-              <Card.Img variant="top" src="/images/fibonacci-sequence.png" />
-              <Card.Body className="text-center">
-                <Card.Title>Fibonacci</Card.Title>
-                <Card.Text>Generates the Fibonacci sequence based on input.</Card.Text>
-                <Button variant="dark" href="https://github.com/JhonatAP/JavaProjects">GitHub</Button>
-              </Card.Body>
-            </Card>
-          </div>
-          <div className="col-md-4">
-            <Card>
-              <Card.Img variant="top" src="/images/fizzbuzz.png" />
-              <Card.Body className="text-center">
-                <Card.Title>FizzBuzz</Card.Title>
-                <Card.Text>Logic-based exercise to print Fizz or Buzz.</Card.Text>
-                <Button variant="dark" href="https://github.com/JhonatAP/JavaProjects">GitHub</Button>
-              </Card.Body>
-            </Card>
-          </div>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Array3D</h3>
+                <img id="housepricing" src="images/3d-array.webp">
+                <p>Prints in console a 3d Array.</p>
+                <a href="https://github.com/JhonatAP/JavaProjects"><img id="fitting"class="github" src="images/github.png"></a>
+            </div>
+            <div class="project-card">
+                <h3>Fibonacci</h3>
+                <img id="classification" src="images/fibonacci-sequence.png">
+                <p>Takes the fibonacci serie based in the number given.</p>
+                <a href="https://github.com/JhonatAP/JavaProjects"><img class="github" src="images/github.png"></a>
+            </div>
+            <div class="project-card">
+                <h3>FizzBuzz</h3>
+                <img id="stockprice" src="images/fizzbuzz.png">
+                <p>Exercise where you put the logic and math to write the message Fizz or Buzz.</p>
+                <a href="https://github.com/JhonatAP/JavaProjects"><img class="github" src="images/github.png"></a>
+            </div>
         </div>
-      </Container>
+    </section>
 
-      <Container id="contact" className="py-5">
-        <h2 className="text-center">Contact Me</h2>
-        <Form className="mt-4 w-50 mx-auto">
-          <Form.Group className="mb-3">
-            <Form.Label>Name:</Form.Label>
-            <Form.Control type="text" required />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Email:</Form.Label>
-            <Form.Control type="email" required />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Message:</Form.Label>
-            <Form.Control as="textarea" rows={3} required />
-          </Form.Group>
-          <Button variant="dark" type="submit" className="w-100">Send</Button>
-        </Form>
-      </Container>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
 
-      <footer className="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
-      </footer>
-    </>
-  );
-};
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved Jonathan.</p>
+    </footer>
 
-export default App;
+    <script src="app.js"></script>
+</body>
+</html>
