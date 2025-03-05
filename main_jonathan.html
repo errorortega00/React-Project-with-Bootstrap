@@ -1,72 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Jonathan's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 <body>
-    <header>
-        <nav class="nav">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <h1  id="text">starting..</h1>
-        <p>I'm a Student of Software Engineering and a Cook.</p>
-    </header>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Jonathan's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm a cook in Kibos since 2020, and actually I'm studying software Engineering. I really enjoy to cook, and also to read Comics.</p>
+ 
+
+    <!-- Sección About -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2>About Me</h2>
+            <p>Hello! I'm a cook in Kibos since 2020, and currently, I'm studying Software Engineering. I really enjoy cooking and reading comics.</p>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Array3D</h3>
-                <img id="housepricing" src="images/3d-array.webp">
-                <p>Prints in console a 3d Array.</p>
-                <a href="https://github.com/JhonatAP/JavaProjects"><img id="fitting"class="github" src="images/github.png"></a>
-            </div>
-            <div class="project-card">
-                <h3>Fibonacci</h3>
-                <img id="classification" src="images/fibonacci-sequence.png">
-                <p>Takes the fibonacci serie based in the number given.</p>
-                <a href="https://github.com/JhonatAP/JavaProjects"><img class="github" src="images/github.png"></a>
-            </div>
-            <div class="project-card">
-                <h3>FizzBuzz</h3>
-                <img id="stockprice" src="images/fizzbuzz.png">
-                <p>Exercise where you put the logic and math to write the message Fizz or Buzz.</p>
-                <a href="https://github.com/JhonatAP/JavaProjects"><img class="github" src="images/github.png"></a>
+    <!-- Sección Hobbies -->
+    <section id="hobbies" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Hobbies</h2>
+            <div class="row justify-content-center">
+                <!-- Pasatiempo 1: The Boys -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/the-boys-hobby.jpg" class="card-img-top" alt="The Boys">
+                        <div class="card-body">
+                            <h5 class="card-title">The Boys</h5>
+                            <p class="card-text">
+                                "The Boys" is a dark and satirical superhero series that follows a group of vigilantes fighting against corrupt superheroes.
+                            </p>
+                            <a href="https://www.primevideo.com/-/es/detail/The-Boys/0KRGHGZCHKS920ZQGY5LBRF7MA" class="btn btn-primary" target="_blank">Watch on Prime Video</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pasatiempo 2: Skyrim -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/skyrim-hobby.jpg" class="card-img-top" alt="Skyrim">
+                        <div class="card-body">
+                            <h5 class="card-title">Skyrim</h5>
+                            <p class="card-text">
+                                Skyrim is an open-world RPG where you can explore a vast world full of quests, dragons, and adventures.
+                            </p>
+                            <a href="https://store.steampowered.com/agecheck/app/489830/?l=spanish" class="btn btn-primary" target="_blank">Buy on Steam</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+    <!-- Sección Contact -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Me</h2>
+            <form class="w-50 mx-auto">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark w-100">Send</button>
+            </form>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 My Portfolio. All rights reserved Jonathan.</p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Jonathan's Portfolio. All rights reserved.</p>
     </footer>
 
-    <script src="app.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
